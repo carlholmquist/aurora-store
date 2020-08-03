@@ -10,6 +10,9 @@ const Header = ({currentUser}) => (
             <Logo className='logo'/>
         </Link>
         <div className='options'>
+            { currentUser ? <div className='option' >Signed in as {currentUser.displayName}</div>  : null
+            }
+            
             <Link className='option' to='/shop'> SHOP </Link>
             <Link className='option' to='/contact'> CONTACT</Link>
             { currentUser ? 

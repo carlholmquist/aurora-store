@@ -1,8 +1,9 @@
 import { cartActionTypes } from './cart.types'
+import { grouper } from './cart.utils';
 
 const INITIAL_STATE = {
     hidden: true,
-    cartItems: []
+    cartItems: [],
 }
 
 const cartReducer = (state = INITIAL_STATE, action) => {
@@ -13,11 +14,11 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                 hidden: !state.hidden
             }
         case cartActionTypes.ADD_ITEM:
+            if (state)
             return {
                 ...state,
-                cartItems: [...state.cartItems,action.payload]
+                cartItems: grouper(state.cartItems,action.payload),
             }
-
         default:
             return state;
     }

@@ -23,6 +23,5 @@ export const removeOne = (cartItems, cartItemToRemove) => {
 }
 
 export const removeAll = (cartItems, cartItemToRemove) => {
-    
     return cartItems.filter(cartItem => cartItem.id !== cartItemToRemove.id).map(cartItem => cartItem)
 }

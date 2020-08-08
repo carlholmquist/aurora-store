@@ -8,7 +8,9 @@ import { addItemToCart, removeOneItemFromCart, removeAllItemFromCart } from '../
 //Style imports
 import './checkout-item.styles.scss';
 
-const CheckoutItem = ({cartItem : {imageUrl, quantity, name, price},removeOneItemFromCart ,removeAllItemFromCart, addItemToCart, cartItem}) => (
+const CheckoutItem = ({ cartItem, removeOneItemFromCart ,removeAllItemFromCart, addItemToCart }) => {
+    const {imageUrl, quantity, name, price} = cartItem;
+    return(
     <div className='checkout-item'>
         <div className='image-container'>
             <img src={imageUrl} alt='product'/>
@@ -28,7 +30,7 @@ const CheckoutItem = ({cartItem : {imageUrl, quantity, name, price},removeOneIte
             <span className='quantity-control' onClick={() => removeAllItemFromCart(cartItem)}> &#10005; </span>
         </div>
     </div>
-)
+)}
 
 const mapDispatchToProps = dispatch => ({
         addItemToCart: item => dispatch(addItemToCart(item)),

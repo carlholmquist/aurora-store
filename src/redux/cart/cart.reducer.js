@@ -1,5 +1,5 @@
 import { cartActionTypes } from './cart.types'
-import { grouper, remover } from './cart.utils';
+import { grouper, removeOne, removeAll } from './cart.utils';
 
 const INITIAL_STATE = {
     hidden: true,
@@ -18,10 +18,15 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 cartItems: grouper(state.cartItems,action.payload),
             }
-        case cartActionTypes.REMOVE_ITEM:
+        case cartActionTypes.REMOVE_ONE_ITEM:
             return {
                 ...state,
-                cartItems: remover(state.cartItems,action.payload)
+                cartItems: removeOne(state.cartItems,action.payload)
+            }
+        case cartActionTypes.REMOVE_ALL_ITEMS:
+            return {
+                ...state,
+                cartItems: removeAll(state.cartItems,action.payload)
             }
         default:
             return state;

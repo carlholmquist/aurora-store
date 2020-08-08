@@ -1,18 +1,27 @@
+//Package imports
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { Route, Switch, Redirect } from 'react-router-dom';
+
+//Component imports
+import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component';
+import HomePage from './pages/homepage/homepage.component.jsx'
+import CheckoutPage from './pages/checkout/checkout.component';
+import SignInAndSignUpPage from './pages/sign-in-and-sign-out/sign-in-and-sign-up.component';
+
+//Redux imports
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
-import HomePage from './pages/homepage/homepage.component.jsx'
-import ShopPage from './pages/shop/shop.component';
-import SignInAndSignUpPage from './pages/sign-in-and-sign-out/sign-in-and-sign-up.component';
-import Header from './components/header/header.component';
- 
+//Firebase imports
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+
+//Style imports
 import './App.css';
-import CheckoutPage from './pages/checkout/checkout.component';
+
+ 
 
 class App extends React.Component {
   

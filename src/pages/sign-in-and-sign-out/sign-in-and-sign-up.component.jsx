@@ -1,6 +1,11 @@
+//Package imports
 import React from 'react';
+
+//Component imports
 import SignIn from '../../components/sign-in/sign-in.component';
 import SignUp from '../../components/sign-up/sign-up.component';
+
+//Style imports
 import './sign-in-and-sign-up.styles.scss';
 
 const SignInAndSignUpPage = () => (

@@ -1,7 +1,11 @@
+//Package imports
 import React from 'react';
+
+//Component imports
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
+//Firebase imports
 import { auth, createUserProfileDocument} from '../../firebase/firebase.utils';
 
 class SignUp extends React.Component {

@@ -1,9 +1,14 @@
+//Package imports
 import React from 'react';
 import { connect } from 'react-redux';
-import { addItemToCart } from '../../redux/cart/cart.actions';
 
+//Component imports
 import CustomButton from '../custom-button/custom-button.component';
 
+//Redux imports
+import { addItemToCart } from '../../redux/cart/cart.actions';
+
+//Style imports
 import './collection-item.styles.scss';
 
 const CollectionItem = ({item, addItemToCart}) => {

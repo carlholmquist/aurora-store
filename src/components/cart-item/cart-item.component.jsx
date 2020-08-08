@@ -1,5 +1,7 @@
+//Package imports
 import React from 'react';
 
+//Style imports
 import './cart-item.styles.scss';
 
 const CartItem = ({imageUrl, id, name, quantity, price, isCheckoutpage}) => (

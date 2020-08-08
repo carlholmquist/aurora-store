@@ -1,5 +1,10 @@
+//Package imports
 import React from 'react';
+
+//Database imports
 import {SHOP_DATA} from './shop.data';
+
+//Component imports
 import CollectionPreview from '../../components/preview/collection-preview.component'
 
 class ShopPage extends React.Component {

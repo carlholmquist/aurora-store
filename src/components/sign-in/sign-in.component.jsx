@@ -1,8 +1,14 @@
+//Package imports
 import React from 'react';
+
+//Component imports
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
+
+//Firebase imports
 import { auth, signInWithGoogle} from  '../../firebase/firebase.utils';
 
+//Style imports
 import './sign-in.styles.scss';
 
 class SignIn extends React.Component {

@@ -1,7 +1,21 @@
 .checkout-item{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    min-height: 100px;
+    border-bottom: 1px solid darkgrey;
+    padding: 15px 0;
+    font-size: 20px;
+    align-items: center;
+
+    .image-container {
+        width: 23%;
+        padding-right: 15px;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
 
     .item-block {
         width: 23%;

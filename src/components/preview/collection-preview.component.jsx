@@ -1,5 +1,10 @@
+//Package imports
 import React from 'react';
+
+//Component imports
 import CollectionItem from '../collection-item/collection-item.component';
+
+//Style imports
 import './collection-preview.styles.scss'
 
 const CollectionPreview = ({ title, items }) => (
@@ -19,5 +24,3 @@ const CollectionPreview = ({ title, items }) => (
 )
 
 export default CollectionPreview;
-
-//<div key={item.id}>{item.name}</div>

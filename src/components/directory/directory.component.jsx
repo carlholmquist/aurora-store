@@ -1,5 +1,10 @@
+//Package imports
 import React from 'react';
+
+//Component imports
 import MenuItem from '../menu-item/menu-item.component'
+
+//Style imports
 import './directory.styles.scss'
 
 class Directory extends React.Component {

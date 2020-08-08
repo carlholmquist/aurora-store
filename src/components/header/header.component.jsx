@@ -1,19 +1,23 @@
+//Package imports
 import React from 'react';
-//route-management
 import { Link } from 'react-router-dom';
-//State-management imports
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { selectCurrentUser } from '../../redux/user/user.selectors';
-import { selectHidden } from '../../redux/cart/cart.selectors';
-//Firebase import
-import { auth } from '../../firebase/firebase.utils';
+
 //Component imports
-import {ReactComponent as Logo} from '../../assets/crown.svg';
 import CartIcon from '../cart-icon/cart-icon-component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
-//style imports
+
+//Redux imports
+import { selectCurrentUser } from '../../redux/user/user.selectors';
+import { selectHidden } from '../../redux/cart/cart.selectors';
+
+//Firebase imports
+import { auth } from '../../firebase/firebase.utils';
+
+//Style imports
 import './header.styles.scss';
+import {ReactComponent as Logo} from '../../assets/crown.svg';
 
 
 class Header extends React.Component {
